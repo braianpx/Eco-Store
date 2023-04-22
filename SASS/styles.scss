@@ -1,0 +1,81 @@
+@use './modules/normalize.scss';
+@use './modules/cards.scss';
+@use './modules/icons.scss';
+@use './modules/images.scss';
+@use './modules/texts.scss';
+@use './modules/utils.scss' as utils;
+@use './modules/buttons.scss';
+
+body {
+  background-color: utils.$color_semiCream;
+}
+::marker{
+  color:red
+}
+.container_nav { // estos estilos son del nav
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  max-height: 12vh;
+  padding: 0vh 4vw;
+  nav {
+    ul  { //separo los elementos ordenadamente
+      display:flex;
+      justify-content: space-between; 
+      gap: 2.8vw;   
+      li {
+        button  { //aqui configuro los estilos de los botones
+          cursor: pointer;
+          border: none;
+          display: block;
+          border-radius: 50%;
+          background-color: transparent;
+          padding: 0px; 
+        }
+      }
+    }
+  }
+}
+
+.layout_main {
+  width: 100%;
+}
+.layout_initial {
+  width: 100%;
+  height: 88vh;
+}
+
+#container_initial {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 12vh 0vh;
+  gap:4rem;
+  text-align: start;
+  h2,p,button {
+    margin-left: 3.5vw;
+    // border: 1px solid red;
+  }
+}
+
+#container_img_initial {
+  width: 50%;
+  height: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    height: 94%;
+    width: 70%;
+    border-radius: 20px;
+    box-shadow: 4px 3px 5px rgba($color: #383838, $alpha: 0.2);
+  }
+}
+
+
+

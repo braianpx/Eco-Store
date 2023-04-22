@@ -1,0 +1,17 @@
+@use './utils.scss' as utils;
+
+.button_primary {
+  cursor: pointer;
+  margin-top: 4vh;
+  padding: 1rem 1.5rem 1rem 2rem;
+  border-radius: 2rem;
+  color:white;
+  @include utils.font_bold;
+  font-size: 1rem;
+  border: none;
+  background-color: utils.$color_lightOrange;
+  transition: transform .5s;
+  &:hover {
+    transform: translateY(-10px);
+  }
+}

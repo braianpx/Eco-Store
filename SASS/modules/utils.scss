@@ -31,15 +31,17 @@ $font: 'IBM Plex Sans', sans-serif;
 $sixty_precent: 60%;
 $oneHundred_percent: 100%;
 
-/* font sizes */ //MEJORAR LAS FONTS PARA LOS TIPOS DE PANTALLA
-$font_xxLarge:3.4rem;
-$font_xLarge: 3rem;
-$font_large: 2.3rem;
-$font_medium: 1.75rem;
-$font_small: 1.5rem;
-$font_xSmall: 1.25rem;
-$font_xxSmall: 0.75rem;
+/* font sizes */
+$size_primaryS: 1.25rem;
+$size_primaryM: 3rem;
+$size_primaryL: 3.4rem;
+/* <--> extras*/
+$size_s: 0.75rem; 
+$size_m: 1.5rem; 
+$size_l: 1.75rem; 
+$size_xl: 2.3rem; 
 
-$font_extra_s: 1rem;
-$font_extra_m: 2rem;
-$font_extra_l: 3rem;
+
+
+
+

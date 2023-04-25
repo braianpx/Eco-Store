@@ -105,6 +105,47 @@ button:hover {
 
 /* porcentages */
 /* font sizes */
+/* <--> extras*/
+.card_primary, .card_secundary {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FFDAC6;
+  width: 19rem;
+  max-width: 19rem;
+  height: 25rem;
+  border-radius: 0.3rem;
+  box-shadow: 0rem 0rem 0.6rem rgba(0, 0, 0, 0.1);
+  padding-bottom: 2rem;
+  transition: transform 0.5s;
+}
+.card_primary:hover, .card_secundary:hover {
+  transform: translateY(-0.9rem);
+}
+.card_primary img, .card_secundary img {
+  width: 76%;
+  height: 68%;
+  object-fit: cover;
+  border-radius: 0.3rem;
+}
+.card_primary button, .card_secundary button {
+  background-color: transparent;
+  position: relative;
+  left: 42%;
+  margin: 1rem 0rem 0.3rem 0rem;
+}
+.card_primary button svg path, .card_secundary button svg path {
+  stroke: #7C6A0A;
+  stroke-width: 1.5;
+}
+
+.card_secundary {
+  background-color: #BABD8D;
+}
+.card_secundary button svg path {
+  stroke: white;
+}
+
 .svg_primary, .svg_heart, .svg_user {
   height: 2.1rem;
   width: 2.1rem;
@@ -135,6 +176,12 @@ button:hover {
   width: 70%;
   border-radius: 0.75rem;
   box-shadow: 0.25rem 0.18rem 0.31rem rgba(56, 56, 56, 0.2);
+}
+
+.map {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -172,12 +219,45 @@ button:hover {
   line-height: 1.5rem;
 }
 
+.subtitles {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  color: #7C6A0A;
+  font-size: 2.3rem;
+  width: 88%;
+}
+
+.title_card, .title_card_secondary {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  margin-top: 0.8rem;
+  font-size: 1.25rem;
+  color: #7C6A0A;
+  line-height: 2rem;
+  text-align: start;
+  width: 76%;
+}
+
+.description_card, .description_card_secondary {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #7C6A0A;
+  width: 76%;
+}
+
+.title_card_secondary {
+  color: white;
+}
+
+.description_card_secondary {
+  color: white;
+}
+
+/* <-- responsive -->*/
 @media (max-width: 1024px) {
   .title_primary {
     font-size: 3rem;
-  }
-  .description_title_primary {
-    font-size: 1.12rem;
   }
 }
 @media (max-width: 768px) {
@@ -186,9 +266,6 @@ button:hover {
   }
   .title_primary {
     font-size: 2.3rem;
-  }
-  .description_title_primary {
-    font-size: 1.2rem;
   }
 }
 @media (max-width: 500px) {
@@ -285,6 +362,40 @@ body {
   justify-content: center;
 }
 
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem 0rem;
+  margin-top: 4rem;
+}
+
+.products_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 88%;
+  gap: 3rem;
+}
+
+.why_us {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem 0rem;
+  margin-top: 4rem;
+}
+.why_us article {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  border: 1px solid red;
+}
+.why_us article p {
+  width: 50%;
+}
+
+/*<-- responsive -->*/
 @media (max-width: 768px) {
   #container_initial {
     padding-top: 3rem;

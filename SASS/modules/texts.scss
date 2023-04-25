@@ -6,46 +6,71 @@
 .brand {
   @include utils.font_regular;
   color: utils.$color_primary;
-  font-size: utils.$font_small;
+  font-size: utils.$size_m;
 }
 .title_primary {
   @include utils.font_semiBold;
   color: utils.$color_primary;
-  font-size: utils.$font_xxLarge;
+  font-size: utils.$size_primaryL;
 }
 .description_title_primary {
   @include utils.font_regular;
   color: utils.$color_primary;
-  font-size: utils.$font_xSmall;
+  font-size: utils.$size_primaryS;
   width: 86%;
-  line-height: utils.$font_small;
+  line-height: 1.5rem;
 }
+.subtitles {
+@include utils.font_regular;
+color: utils.$color_primary;
+font-size: utils.$size_xl;
+width: 88%;
+} 
+.title_card {
+  @include utils.font_semiBold;
+  margin-top: 0.8rem;
+  font-size: utils.$size_primaryS;
+  color: utils.$color_primary;
+  line-height: 2rem;
+  text-align: start;
+  width: 76%;
+}
+.description_card {
+  @include utils.font_regular;
+  font-size: 0.9rem;
+  color: utils.$color_primary;
+  width: 76%;
+}
+.title_card_secondary {
+  @extend .title_card;
+  color:white; 
+}
+.description_card_secondary {
+  @extend .description_card;
+  color:white; 
+}
+
+/* <-- responsive -->*/
 
 @media (max-width: 1024px) {
   .title_primary {
-    font-size: utils.$font_extra_l;
-  }
-  .description_title_primary {
-    font-size: 1.12rem;
+    font-size: utils.$size_primaryM;
   }
 }
 @media (max-width: 768px) {
   .brand {
-    font-size: utils.$font_xSmall;
+    font-size: utils.$size_primaryS;
   }
   .title_primary {
-    font-size: utils.$font_large;
-  }
-  .description_title_primary {
-    font-size: 1.2rem;
+    font-size: utils.$size_xl;
   }
 }
 @media (max-width: 500px) {
   .title_primary {
-    font-size: utils.$font_medium;
+    font-size: utils.$size_l;
   }
   .description_title_primary {
-    font-size: utils.$font_xxSmall;
+    font-size: utils.$size_s;
     line-height: 1rem;
     width: utils.$oneHundred_percent;
   }

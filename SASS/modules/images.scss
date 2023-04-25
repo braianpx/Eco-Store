@@ -8,6 +8,12 @@
     box-shadow: 0.25rem 0.18rem 0.31rem rgba($color: #383838, $alpha: 0.2);
 }
 
+.map {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
 @media (max-width: 768px) {
   .image_initial {
     width: 90%;

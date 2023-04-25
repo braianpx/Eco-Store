@@ -1,3 +1,4 @@
+/* colors */
 $color_primary: #7C6A0A;
 $color_secundary: #BABD8D;
 $color_cream: #FFDAC6;
@@ -5,8 +6,8 @@ $color_semiCream: #FFEFE7;
 $color_orange: #E86424;
 $color_lightOrange: #FA9500;
 
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
-
 $font: 'IBM Plex Sans', sans-serif;
 
 @mixin font_regular{
@@ -26,4 +27,19 @@ $font: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
 }
 
+/* porcentages */
+$sixty_precent: 60%;
+$oneHundred_percent: 100%;
 
+/* font sizes */ //MEJORAR LAS FONTS PARA LOS TIPOS DE PANTALLA
+$font_xxLarge:3.4rem;
+$font_xLarge: 3rem;
+$font_large: 2.3rem;
+$font_medium: 1.75rem;
+$font_small: 1.5rem;
+$font_xSmall: 1.25rem;
+$font_xxSmall: 0.75rem;
+
+$font_extra_s: 1rem;
+$font_extra_m: 2rem;
+$font_extra_l: 3rem;

@@ -1,21 +1,29 @@
-@mixin svg{
-  height: 1.8rem;
-  width: 1.8rem;
-  display: block;
+@use './utils.scss' as utils;
+
+@mixin svg {
+  height: 2.1rem;
+  width: 2.1rem;
   background-color: transparent;
 }
 .svg_primary {
   @include svg;
-  border-radius:5px;
+  border-radius:0.3rem;
 }
 .svg_user {
   @extend .svg_primary;
-  border-radius: 100%;
+  border-radius: utils.$oneHundred_percent;
 }
 .svg_heart {
   @extend .svg_primary;
-  border-top-right-radius: 60%;
-  border-top-left-radius: 60%;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
+  border-top-right-radius: utils.$sixty_precent;
+  border-top-left-radius:  utils.$sixty_precent;
+  border-bottom-left-radius:  utils.$oneHundred_percent;
+  border-bottom-right-radius: utils.$oneHundred_percent;
+}
+
+@media (max-width:1024px){
+  .svg_primary {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
 }

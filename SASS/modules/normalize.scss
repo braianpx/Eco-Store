@@ -90,3 +90,13 @@ hr {
   margin:1em 0;
   padding:0;
 }
+/* normalize button */
+button {
+  cursor: pointer;
+  border: none;
+  transition: transform .5s;
+  padding: 0.2rem;
+  &:hover {
+    transform: translateY(-0.37rem);
+  }
+}

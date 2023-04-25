@@ -1,17 +1,30 @@
 @use './utils.scss' as utils;
 
 .button_primary {
-  cursor: pointer;
-  margin-top: 4vh;
-  padding: 1rem 1.5rem 1rem 2rem;
-  border-radius: 2rem;
-  color:white;
   @include utils.font_bold;
   font-size: 1rem;
-  border: none;
+  color: white;
   background-color: utils.$color_lightOrange;
-  transition: transform .5s;
+  margin-top: 8vh;
+  padding: 1rem 1.5rem 1rem 2rem;
+  border-radius: 1.5rem;
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-0.62rem);
+  }
+}
+#navbar-toggle {
+  display: none;
+  background-color: transparent;
+}
+
+/*responsive*/
+@media (max-width: 500px) {
+  #navbar-toggle {
+    display: block;
+  }
+  .button_primary {
+    margin: 0.62rem 0rem;
+    padding: 0.8rem 0.8rem 0.8rem 1rem;
+    font-size: 0.82rem;
   }
 }

@@ -1,24 +1,28 @@
 @use './utils.scss' as utils;
 
-@mixin svg {
+@mixin borderRadius($top, $bottom){
+  border-top-right-radius: $top+0%;
+  border-top-left-radius: $top+0%;
+  border-bottom-left-radius: $bottom+0%;
+  border-bottom-right-radius: $bottom+0%;
+}
+
+@mixin svg{
   height: 2.1rem;
   width: 2.1rem;
   background-color: transparent;
 }
 .svg_primary {
   @include svg;
-  border-radius:0.3rem;
+  border-radius: 0.3rem;
 }
 .svg_user {
   @extend .svg_primary;
-  border-radius: utils.$oneHundred_percent;
+  border-radius: 100%;
 }
 .svg_heart {
   @extend .svg_primary;
-  border-top-right-radius: utils.$sixty_precent;
-  border-top-left-radius:  utils.$sixty_precent;
-  border-bottom-left-radius:  utils.$oneHundred_percent;
-  border-bottom-right-radius: utils.$oneHundred_percent;
+  @include borderRadius(60,100);
 }
 
 @media (max-width:1024px){

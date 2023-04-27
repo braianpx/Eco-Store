@@ -1,0 +1,64 @@
+/* colors */
+$color_primary: #7C6A0A;
+$color_secundary: #BABD8D;
+$color_cream: #FFDAC6;
+$color_semiCream: #FFEFE7;
+$color_orange: #E86424;
+$color_lightOrange: #FA9500;
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+$font: 'IBM Plex Sans', sans-serif;
+
+@mixin font_($weight) {
+  font-family: $font;
+  font-weight: $weight;
+}
+
+$font_size: 0.4;
+$limit: 5;
+
+@function size-calc($size) {
+  @return ($size * $font_size) + 0rem;
+} 
+
+/* col width */
+@for $i from 1 to $limit {
+  .col-#{$i*20}{
+    width: $i * 20;
+  }
+  @if($i < 3){
+    .col-#{$i*25}{
+      width: $i * 25;
+    }
+  }
+}
+
+/* margins */
+@for $i from 0 to $limit {
+  .m-#{$i}{
+    margin: $i * $font_size;
+  }
+  .my-#{$i}{
+    margin: $i * $font_size 0;
+  }
+  .mx-#{$i}{
+    margin: 0 $i * $font_size;
+  }
+}
+/* paddings */
+@for $i from 0 to $limit {
+  .p-#{$i}{
+    padding: $i * $font_size;
+  }
+  .py-#{$i}{
+    padding: $i * $font_size 0;
+  }
+  .px-#{$i}{
+    padding: 0 $i * $font_size;
+  }
+}
+
+
+
+

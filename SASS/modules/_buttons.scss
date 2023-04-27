@@ -1,0 +1,40 @@
+@use 'utils' as utils;
+
+
+@mixin button(
+  $color: white, $bg-color: utils.$color_lightOrange, $size: 1rem, $font: 700 
+  ){
+  @include utils.font_($font);
+  font-size: utils.size-calc($size);
+  color: $color;
+  background-color: utils.$color_lightOrange;
+}
+.button {
+  padding: 1rem 1.5rem 1rem 2rem;
+  border-radius: 1.5rem;
+  &.button_primary {
+    @include button(white, utils.$color_lightOrange, 2.4, 700);
+    margin-top: 8vh;
+    &:hover {
+    transform: translateY(-0.62rem);
+    }
+  }
+}
+#navbar-toggle {
+  display: none;
+  background-color: transparent;
+}
+
+/*responsive*/
+@media (max-width: 500px) {
+  #navbar-toggle {
+    display: block;
+  }
+    .button { 
+    &.button_primary {
+      margin: 0.62rem 0rem;
+      padding: 0.8rem 0.8rem 0.8rem 1rem;
+      font-size: 0.82rem;
+    }
+  }
+}

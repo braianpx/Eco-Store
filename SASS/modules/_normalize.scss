@@ -50,7 +50,6 @@ a {
   background:transparent;
 }
 
-/* change colours to suit your needs */
 
 ins {
   background-color:#ff9;
@@ -58,7 +57,6 @@ ins {
   text-decoration:none;
 }
 
-/* change colours to suit your needs */
 
 mark {
   background-color:#ff9;
@@ -81,7 +79,7 @@ table {
   border-spacing:0;
 }
 
-/* change border colour to suit your needs */
+
 hr {
   display:block;
   height:1px;
@@ -90,12 +88,12 @@ hr {
   margin:1em 0;
   padding:0;
 }
-/* normalize button */
+
 button {
   cursor: pointer;
   border: none;
-  transition: transform .5s;
   padding: 0.2rem;
+  transition: transform .5s;
   &:hover {
     transform: translateY(-0.37rem);
   }

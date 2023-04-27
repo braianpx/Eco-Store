@@ -1,21 +1,35 @@
-@use './utils.scss' as utils;
-.card_primary {
+@use 'utils' as utils;
+
+.card {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  background-color: utils.$color_cream;
+  flex-direction: column; // crear una variable o clase para esto
   width: 19rem;
   max-width: 19rem;
   height: 25rem;
+  min-height: 25rem;
   border-radius: 0.3rem;
   box-shadow: 0rem 0rem 0.6rem rgba(black, 0.1);
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   transition: transform .5s;
   &:hover {
     transform: translateY(-0.9rem);
   }
+  &.card_primary {
+    background-color: utils.$color_cream;
+  }
+  &.card_secundary {
+    background-color: utils.$color_secundary;
+    button {
+     svg {
+       path {
+         stroke: white;
+       }
+     }
+    }
+  }
   img {
-    width: 76%;
+    width: 78%;
     height: 68%;
     object-fit: cover;
     border-radius: 0.3rem;
@@ -23,7 +37,7 @@
   button {
     background-color: transparent;
     position: relative;
-    left: 42%;
+    left: 43%;
     margin: 1rem 0rem 0.3rem 0rem;
     svg {
       path {
@@ -33,14 +47,15 @@
     }
   }
 }
-.card_secundary {
- @extend .card_primary;
- background-color: utils.$color_secundary;
- button {
-  svg {
-    path {
-      stroke: white;
+
+
+@media (max-width: 1024px) {
+  .card {
+    width: 17rem;
+    height: 22rem;
+    min-height: 22rem;
+    img {
+      height: 60%;
     }
-  }
- }
+  } 
 }

@@ -22,14 +22,69 @@ $limit: 5;
   @return ($size * $font_size) + 0rem;
 } 
 
+.col {
+  display: flex;
+  flex-direction: column;
+  &.separation {
+      gap: 4rem 0rem;
+      margin-top: 3rem;
+  }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+/* justify */
+.justify-start {
+  justify-content: start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+/* align */
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: start;
+}
+.align-end {
+  align-items: end;
+}
+/* wrap */
+.wrap {
+  flex-wrap: wrap;
+}
+/* text align */
+.text-center {
+  text-align: center;
+}
+.text-start {
+  text-align: start;
+}
 /* col width */
 @for $i from 1 to $limit {
-  .col-#{$i*20}{
-    width: $i * 20;
+  .w-#{$i*20}{
+    width: $i * 20%;
   }
-  @if($i < 3){
-    .col-#{$i*25}{
-      width: $i * 25;
+  .h-#{$i*20}{
+    width: $i * 20%;
+  }
+  @if($i <= 3){
+    .w-#{$i*25}{
+      width: $i * 25%;
+    }
+    .h-#{$i*25}{
+      width: $i * 25%;
     }
   }
 }
@@ -59,6 +114,11 @@ $limit: 5;
   }
 }
 
-
-
-
+@media (max-width:500px) {
+  .col {
+    &.separation {
+      margin-top: 2rem;
+      gap:2rem;
+    }
+  }  
+}

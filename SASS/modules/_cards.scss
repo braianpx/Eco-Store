@@ -1,9 +1,6 @@
 @use 'utils' as utils;
 
 .card {
-  display: flex;
-  align-items: center;
-  flex-direction: column; // crear una variable o clase para esto
   width: 19rem;
   max-width: 19rem;
   height: 25rem;
@@ -28,12 +25,6 @@
      }
     }
   }
-  img {
-    width: 78%;
-    height: 68%;
-    object-fit: cover;
-    border-radius: 0.3rem;
-  }
   button {
     background-color: transparent;
     position: relative;
@@ -54,8 +45,5 @@
     width: 17rem;
     height: 22rem;
     min-height: 22rem;
-    img {
-      height: 60%;
-    }
   } 
 }

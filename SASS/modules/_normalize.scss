@@ -121,3 +121,15 @@ button {
 html {
   scroll-behavior: smooth;
 }
+* {
+  transition: all .8s ease-in-out;
+}
+@media (max-width: 500px) {
+  ::-webkit-scrollbar {
+    height: 0.7rem;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: utils.$color_cream;
+  }
+}
+

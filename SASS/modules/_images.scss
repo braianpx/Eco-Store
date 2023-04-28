@@ -18,7 +18,7 @@
     @include image(0.3rem, 78%, 68%);
   }
   &.img_gallery {
-    @include image(1rem, 25rem, 22rem);
+    @include image(1rem, 23rem, 22rem);
   }
 }
 /* responsive */
@@ -26,6 +26,10 @@
   .img {
     &.image_card {
       height: 60%;
+    }
+    &.img_gallery {
+      width: 17.3rem;
+      height: 16rem;
     }
   }
 }
@@ -36,12 +40,26 @@
       height: 70vh;
     }
   }
+  .svg_lightBulb {
+    position: relative;
+    right: 1.4rem;
+  }
 }
-@media (max-width:500px){
+@media (max-width: 500px){
   .img {
     &.image_initial {
       width: 86%;
       height: 100%;
     }
+    &.map {
+      height: 60vh;
+    }
+    &.img_gallery {
+      width: 18rem;
+      height: 18rem;
+    }
+  }
+  .svg_lightBulb {
+    right: 0rem;
   }
 }

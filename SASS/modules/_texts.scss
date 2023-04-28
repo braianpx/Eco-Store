@@ -72,6 +72,9 @@
   }
   .subtitles {
     font-size: utils.size-calc(5);
+    &.subtitles_tertiary {
+      font-size: utils.size-calc(4);
+    }
   } 
   .title_card {
     font-size: utils.size-calc(3);
@@ -83,7 +86,18 @@
   }
   .subtitles {
     font-size: utils.size-calc(4);
+    &.subtitles_tertiary {
+      font-size: utils.size-calc(3);
+    }
   } 
+  .text {
+    &.text_primary {
+      font-size: utils.size-calc(3);
+    }
+    &.text_secundary {
+      font-size: utils.size-calc(2);
+    }
+  }
 }
 @media (max-width: 500px) {
   .title_primary {

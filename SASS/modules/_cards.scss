@@ -1,0 +1,49 @@
+@use 'utils' as utils;
+
+.card {
+  width: 19rem;
+  max-width: 19rem;
+  height: 25rem;
+  min-height: 25rem;
+  border-radius: 0.3rem;
+  box-shadow: 0rem 0rem 0.6rem rgba(black, 0.1);
+  padding-bottom: 3rem;
+  transition: transform .5s;
+  &:hover {
+    transform: translateY(-0.9rem);
+  }
+  &.card_primary {
+    background-color: utils.$color_cream;
+  }
+  &.card_secundary {
+    background-color: utils.$color_secundary;
+    button {
+     svg {
+       path {
+         stroke: white;
+       }
+     }
+    }
+  }
+  button {
+    background-color: transparent;
+    position: relative;
+    left: 43%;
+    margin: 1rem 0rem 0.3rem 0rem;
+    svg {
+      path {
+        stroke:utils.$color_primary;
+        stroke-width: 1.5;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .card {
+    width: 17rem;
+    height: 22rem;
+    min-height: 22rem;
+  } 
+}

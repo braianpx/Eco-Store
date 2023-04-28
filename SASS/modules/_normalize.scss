@@ -1,3 +1,5 @@
+@use 'utils' as utils;
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -18,7 +20,10 @@ time, mark, audio, video {
   vertical-align:baseline;
   background:transparent;
 }
-
+::selection {
+    color: green;
+    background-color: cornsilk;
+}
 body {
   line-height:1;
 }
@@ -48,9 +53,11 @@ a {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
+  transition: transform .5s;
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
 }
-
-/* change colours to suit your needs */
 
 ins {
   background-color:#ff9;
@@ -58,7 +65,6 @@ ins {
   text-decoration:none;
 }
 
-/* change colours to suit your needs */
 
 mark {
   background-color:#ff9;
@@ -81,7 +87,7 @@ table {
   border-spacing:0;
 }
 
-/* change border colour to suit your needs */
+
 hr {
   display:block;
   height:1px;
@@ -90,13 +96,28 @@ hr {
   margin:1em 0;
   padding:0;
 }
-/* normalize button */
+
 button {
   cursor: pointer;
   border: none;
-  transition: transform .5s;
   padding: 0.2rem;
+  transition: transform .5s;
   &:hover {
     transform: translateY(-0.37rem);
   }
+}
+::-webkit-scrollbar {
+  width: 0.9rem;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: utils.$color_cream;
+}
+::-webkit-scrollbar-track {
+  margin: 0.2rem 0rem;
+  border-radius: 1rem; 
+}
+html {
+  scroll-behavior: smooth;
 }

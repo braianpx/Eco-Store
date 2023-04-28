@@ -1,0 +1,47 @@
+@use 'utils' as utils;
+
+@mixin image($border-radius: 0.5rem, $width: auto, $height: auto){
+  border-radius: $border-radius;
+  width: $width;
+  height: $height;
+}
+.img {
+  object-fit: cover;
+  &.image_initial {
+    @include image(0.75rem, 70%, 94%);
+    box-shadow: 0.25rem 0.18rem 0.31rem rgba($color: #383838, $alpha: 0.2);
+  }
+  &.map {
+    @include image(0.5rem, 87vw);
+  }
+  &.img-card {
+    @include image(0.3rem, 78%, 68%);
+  }
+  &.img_gallery {
+    @include image(1rem, 25rem, 22rem);
+  }
+}
+/* responsive */
+@media (max-width: 1024px) {
+  .img {
+    &.image_card {
+      height: 60%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .img {
+    &.image_initial {
+      width: 90%;
+      height: 70vh;
+    }
+  }
+}
+@media (max-width:500px){
+  .img {
+    &.image_initial {
+      width: 86%;
+      height: 100%;
+    }
+  }
+}

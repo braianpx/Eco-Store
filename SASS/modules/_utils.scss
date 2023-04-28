@@ -1,0 +1,128 @@
+/* colors */
+$color_primary: #7C6A0A;
+$color_secundary: #BABD8D;
+$color_cream: #FFDAC6;
+$color_semiCream: #FFEFE7;
+$color_orange: #E86424;
+$color_lightOrange: #FA9500;
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+$font: 'IBM Plex Sans', sans-serif;
+
+@mixin font_($weight) {
+  font-family: $font;
+  font-weight: $weight;
+}
+
+$font_size: 0.4;
+$size: 1.2;
+$limit: 6;
+
+@function size-calc($size) {
+  @return ($size * $font_size) + 0rem;
+} 
+
+.col {
+  display: flex;
+  flex-direction: column;
+  &.separation {
+      gap: 4rem 0rem;
+      margin-top: 3rem;
+  }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+/* justify */
+.justify-start {
+  justify-content: start;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-space-evenly {
+  justify-content: space-evenly;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.justify-space-around {
+  justify-content: space-around;
+}
+/* align */
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: start;
+}
+.align-end {
+  align-items: end;
+}
+/* wrap */
+.wrap {
+  flex-wrap: wrap;
+}
+/* text align */
+.text-center {
+  text-align: center;
+}
+.text-start {
+  text-align: start;
+}
+/* col width */
+@for $i from 1 to $limit {
+  .w-#{$i*20}{
+    width: $i * 20%;
+  }
+  .h-#{$i*20}{
+    width: $i * 20%;
+  }
+  @if($i <= 3){
+    .w-#{$i*25}{
+      width: $i * 25%;
+    }
+    .h-#{$i*25}{
+      width: $i * 25%;
+    }
+  }
+}
+
+/* margins */
+@for $i from 0 to $limit {
+  .m-#{$i}{
+    margin: $i * $size+rem ;
+  }
+  .my-#{$i}{
+    margin: $i * $size+rem 0;
+  }
+  .mx-#{$i}{
+    margin: 0 $i * $size+rem;
+  }
+  .mt-#{$i}{
+    margin-top: $i * $size+rem;
+  }
+}
+/* paddings */
+@for $i from 0 to $limit {
+  .p-#{$i}{
+    padding: $i * $size+rem;
+  }
+  .py-#{$i}{
+    padding: $i * $size+rem 0;
+  }
+  .px-#{$i}{
+    padding: 0 $i * $size+rem;
+  }
+}
+
+@media (max-width:500px) {
+  .col {
+    &.separation {
+      margin-top: 2rem;
+      gap:2rem;
+    }
+  }  
+}

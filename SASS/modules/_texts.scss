@@ -1,0 +1,100 @@
+@use './utils' as utils;
+
+@mixin text($font, $color, $size) {
+  @include utils.font_($font);
+  color: $color;
+  font-size: utils.size-calc($size);
+}
+
+.brand {
+  @include text(400, utils.$color_primary, 3.5);
+}
+.title_primary {
+  @include text(600, utils.$color_primary, 7);
+}
+.description_title_primary {
+  @include text(400, utils.$color_primary, 3);
+  width: 86%;
+  line-height: 1.5rem;
+}
+.subtitles {
+  @include text(400, utils.$color_primary, 6);
+  width: 88%;
+  &.subtitles_secundary {
+  font-weight: 500;
+  }
+  &.subtitles_tertiary {
+    font-size: utils.size-calc(5);
+    color: utils.$color_orange;
+  }
+} 
+.title_card {
+  @include text(600, utils.$color_primary, 3.5);
+  margin-top: 0.8rem;
+  line-height: 2rem;
+  width: 78%;
+  &.title_card_secondary {
+    color:white; 
+  }
+}
+.description_card {
+  @include text(400, utils.$color_primary, 2.2);
+  width: 78%;
+  line-height: 1.1rem;
+  &.description_card_secondary {
+    color:white; 
+  }
+}
+.text {
+  line-height: 2rem;
+  &.text_primary {
+    @include text(500, utils.$color_orange, 4);
+  }
+  &.text_secundary {
+    @include text(400, utils.$color_orange, 3);
+    width: 87.5%;
+  }
+  &.text_footer {
+    width: fit-content;
+    @include text(400, #FFFFFF, 2.4);
+    &.brand {
+      @include text(500, #FFFFFF, 3.5);
+      padding: 2rem 0rem 1rem 0rem;
+    }
+  }
+}
+
+/* <-- responsive -->*/
+
+@media (max-width: 1024px) {
+  .title_primary {
+    font-size: utils.size-calc(6);
+  }
+  .subtitles {
+    font-size: utils.size-calc(5);
+  } 
+  .title_card {
+    font-size: utils.size-calc(3);
+  }
+}
+@media (max-width: 768px) {
+  .title_primary {
+    font-size: utils.size-calc(5);
+  }
+  .subtitles {
+    font-size: utils.size-calc(4);
+  } 
+}
+@media (max-width: 500px) {
+  .title_primary {
+    font-size: utils.size-calc(4);
+  }
+  .description_title_primary {
+    font-size: utils.size-calc(2);
+    line-height: 1rem;
+    width: 100%;
+  }
+  .subtitles {
+    font-size: utils.size-calc(3.5);
+  } 
+}

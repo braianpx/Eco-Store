@@ -20,6 +20,13 @@
 .subtitles {
   @include text(400, utils.$color_primary, 6);
   width: 88%;
+  &.subtitles_secundary {
+  font-weight: 500;
+  }
+  &.subtitles_tertiary {
+    font-size: utils.size-calc(5);
+    color: utils.$color_orange;
+  }
 } 
 .title_card {
   @include text(600, utils.$color_primary, 3.5);
@@ -36,6 +43,24 @@
   line-height: 1.1rem;
   &.description_card_secondary {
     color:white; 
+  }
+}
+.text {
+  line-height: 2rem;
+  &.text_primary {
+    @include text(500, utils.$color_orange, 4);
+  }
+  &.text_secundary {
+    @include text(400, utils.$color_orange, 3);
+    width: 87.5%;
+  }
+  &.text_footer {
+    width: fit-content;
+    @include text(400, #FFFFFF, 2.4);
+    &.brand {
+      @include text(500, #FFFFFF, 3.5);
+      padding: 2rem 0rem 1rem 0rem;
+    }
   }
 }
 

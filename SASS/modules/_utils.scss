@@ -16,7 +16,8 @@ $font: 'IBM Plex Sans', sans-serif;
 }
 
 $font_size: 0.4;
-$limit: 5;
+$size: 1.2;
+$limit: 6;
 
 @function size-calc($size) {
   @return ($size * $font_size) + 0rem;
@@ -92,25 +93,28 @@ $limit: 5;
 /* margins */
 @for $i from 0 to $limit {
   .m-#{$i}{
-    margin: $i * $font_size;
+    margin: $i * $size+rem ;
   }
   .my-#{$i}{
-    margin: $i * $font_size 0;
+    margin: $i * $size+rem 0;
   }
   .mx-#{$i}{
-    margin: 0 $i * $font_size;
+    margin: 0 $i * $size+rem;
+  }
+  .mt-#{$i}{
+    margin-top: $i * $size+rem;
   }
 }
 /* paddings */
 @for $i from 0 to $limit {
   .p-#{$i}{
-    padding: $i * $font_size;
+    padding: $i * $size+rem;
   }
   .py-#{$i}{
-    padding: $i * $font_size 0;
+    padding: $i * $size+rem 0;
   }
   .px-#{$i}{
-    padding: 0 $i * $font_size;
+    padding: 0 $i * $size+rem;
   }
 }
 
